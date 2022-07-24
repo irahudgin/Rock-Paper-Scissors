@@ -6,7 +6,8 @@
 }
 
 #rockpaperscissors {
-  height: 50vh;
+  height: 60vh;
+  min-height: 400px;
 }
 
 .buttonholder {
@@ -14,11 +15,16 @@
   display: flex;
   width: 80vw;
   justify-content: center;
-  gap: 20vh;
+  gap: 10vh;
 }
 
 button {
-  border: 0.4rem solid black;
+  border: 0.2rem solid black;
   border-radius: 0.5rem;
   padding: 1rem 0.5rem;
+  width: 10rem;
+  min-width: 8rem;
+  text-shadow: 0rem 0rem 0.5rem black;
+  color: white;
+  background: rgb(174, 174, 174);
 }
