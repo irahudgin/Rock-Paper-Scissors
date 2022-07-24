@@ -1,0 +1,24 @@
+.mainholder {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#rockpaperscissors {
+  height: 50vh;
+}
+
+.buttonholder {
+  margin-top: 50px;
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  gap: 20vh;
+}
+
+button {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+}

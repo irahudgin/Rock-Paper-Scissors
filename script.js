@@ -22,7 +22,7 @@ let game = () => {
   let playerScore = 0;
   let computerScore = 0;
   for (let i = 1; i <= 50; i++) {
-    let playerSelectionPrompt = prompt("Rock paper scissors! : ");
+    // let playerSelectionPrompt = prompt("Rock paper scissors! : ");
 
     let computerSelection = choices.at(Math.floor(Math.random() * 3));
 
