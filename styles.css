@@ -30,7 +30,7 @@ button {
   background: rgb(192, 192, 192);
 }
 
-.liveresults {
+#liveresults {
   text-align: center;
   width: 400px;
   height: 100px;

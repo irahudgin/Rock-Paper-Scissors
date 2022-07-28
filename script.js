@@ -20,38 +20,28 @@ let playRound = (plr) => {
   }
 };
 
-let game = () => {
+let game = (e) => {
   let playerScore = 0;
   let computerScore = 0;
-  for (let i = 1; i <= 50; i++) {
-    let playerSelectionPrompt = prompt("Rock paper scissors! : ");
 
-    let playerSelection = playerSelectionPrompt.toLowerCase();
+  let playerSelection = e.target.id;
 
-    let winner = playRound(playerSelection);
-    console.log(winner);
+  let winner = playRound(playerSelection);
+  console.log(winner);
 
-    if (winner.charAt(0) === "P") {
-      playerScore++;
-    } else if (winner.charAt(0) === "C") {
-      computerScore++;
-    }
-
-    let divlog = document.createElement("p");
-    divlog.textContent = winner;
-    liveresults.appendChild(divlog);
-
-    console.log(`player: ${playerScore}`);
-    console.log(`computer: ${computerScore}`);
-
-    if (playerScore > 2) {
-      console.log("Player wins the game!");
-      break;
-    } else if (computerScore > 2) {
-      console.log("Computer wins the game!");
-      break;
-    }
+  if (winner.charAt(0) === "P") {
+    playerScore++;
+  } else if (winner.charAt(0) === "C") {
+    computerScore++;
   }
+
+  let divlog = document.createElement("p");
+  divlog.textContent = winner;
+  liveresults.appendChild(divlog);
+
+  console.log(`player: ${playerScore}`);
+  console.log(`computer: ${computerScore}`);
 };
 
-game();
+const button = document.querySelectorAll("button");
+button.forEach((button) => button.addEventListener("click", game));
