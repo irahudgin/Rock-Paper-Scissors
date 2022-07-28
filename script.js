@@ -1,4 +1,7 @@
-let playRound = (plr, cmp) => {
+let playRound = (plr) => {
+  const choices = ["rock", "paper", "scissors"];
+  let cmp = choices.at(Math.floor(Math.random() * 3));
+
   if (plr === cmp) {
     let scoreString = `Draw! ${plr} + ${cmp}!`;
     return scoreString;
@@ -18,17 +21,14 @@ let playRound = (plr, cmp) => {
 };
 
 let game = () => {
-  const choices = ["rock", "paper", "scissors"];
   let playerScore = 0;
   let computerScore = 0;
   for (let i = 1; i <= 50; i++) {
-    // let playerSelectionPrompt = prompt("Rock paper scissors! : ");
-
-    let computerSelection = choices.at(Math.floor(Math.random() * 3));
+    let playerSelectionPrompt = prompt("Rock paper scissors! : ");
 
     let playerSelection = playerSelectionPrompt.toLowerCase();
 
-    let winner = playRound(playerSelection, computerSelection);
+    let winner = playRound(playerSelection);
     console.log(winner);
 
     if (winner.charAt(0) === "P") {
@@ -36,6 +36,10 @@ let game = () => {
     } else if (winner.charAt(0) === "C") {
       computerScore++;
     }
+
+    let divlog = document.createElement("p");
+    divlog.textContent = winner;
+    liveresults.appendChild(divlog);
 
     console.log(`player: ${playerScore}`);
     console.log(`computer: ${computerScore}`);
