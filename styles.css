@@ -28,6 +28,12 @@ button {
   text-shadow: 0rem 0rem 0.5rem black;
   color: white;
   background: rgb(192, 192, 192);
+  transition: all 0.07s ease;
+}
+
+.buttonclicked {
+  transform: scale(1.2);
+  border-color: red;
 }
 
 #liveresults {
@@ -38,4 +44,9 @@ button {
   margin-top: 50px;
   border-radius: 0.5rem;
   border: 0.2rem solid black;
+  overflow: auto;
+}
+
+p {
+  font-size: small;
 }
