@@ -26,9 +26,6 @@ function removeTransition(e) {
 }
 
 let game = (e) => {
-  let playerScore = 0;
-  let computerScore = 0;
-
   const button = document.querySelector(`#${e.target.id}`);
   let playerSelection = e.target.id;
   button.classList.add("buttonclicked");
@@ -47,9 +44,14 @@ let game = (e) => {
   liveresults.appendChild(divlog);
   divlog.scrollIntoView();
 
-  console.log(`player: ${playerScore}`);
-  console.log(`computer: ${computerScore}`);
+  const plrscore = document.querySelector("#plrscore");
+  const cmpscore = document.querySelector("#cmpscore");
+  plrscore.textContent = `Player Score: ${playerScore}`;
+  cmpscore.textContent = `Computer Score: ${computerScore}`;
 };
+
+let playerScore = 0;
+let computerScore = 0;
 
 const button = document.querySelectorAll("button");
 button.forEach((button) => {

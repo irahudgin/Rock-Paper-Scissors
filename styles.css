@@ -41,10 +41,19 @@ button {
   width: 400px;
   height: 100px;
   background: rgb(192, 192, 192);
-  margin-top: 50px;
   border-radius: 0.5rem;
   border: 0.2rem solid black;
   overflow: auto;
+}
+
+.scores {
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+
+.scores p {
+  font-size: medium;
 }
 
 p {
